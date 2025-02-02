@@ -1,0 +1,23 @@
+validate_spec_task:
+  description: >
+    validate the specification based on the specfication rules 
+    sample specification is 
+    name : student
+    db_name : db_master
+    properties :
+      - name : name
+        type : string
+        required : true
+      - name : dob
+        type : date
+      - name : class
+        type : string
+        reference : class
+  expected_output: > 
+        return error if specification is has any error and possible corretion
+
+get_spec_task:
+   description: > 
+      return the requested specification
+   expected_output: >
+      return specification if doesn't exist return error

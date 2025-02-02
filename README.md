@@ -1,7 +1,7 @@
 # Ajay.Nema.AI
 Objective:
 Provide ajay.nema.ai with the application knowledge, and it will automatically generate a foundational agent-based application. Knowledge can be provided in various formats, such as YAML, JSON, or even natural language descriptions.
-ajay.nema.ai will be capable of scanning the current application database to construct a basic agentic AI-based application. This initial framework can be easily enhanced and expanded with more sophisticated business logic and rules as your needs evolve. Additionally, ajay.nema.ai will offer a flexible framework that enables the seamless integration of more agents into your application, allowing you to expand and scale your solution effortlessly—without any programming experience required.
+ajay.nema.ai will be capable of scanning the current application database to construct a basic agentic AI-based application. This initial framework can be easily enhanced and expanded with more sophisticated business logic and rules as your needs in the application. Additionally, ajay.nema.ai will offer a flexible framework that enables the seamless integration of more agents into your application, allowing you to expand and scale your solution effortlessly—without any programming experience required.
 
 This collection of intelligent AI agents can be used to build a fully agentic application. Below is a list of the core agents included in the system:
 

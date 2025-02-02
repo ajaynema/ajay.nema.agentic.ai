@@ -1,0 +1,5 @@
+name : section
+db_name : db_master
+properties:
+   - name : name
+     type : string

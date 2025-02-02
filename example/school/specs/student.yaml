@@ -1,0 +1,12 @@
+name : student
+db_name : db_master
+properties :
+  - name : name
+    type : string
+    required : true
+  - name : dob
+    type : date
+  - name : class
+    type : string
+    reference : class
+

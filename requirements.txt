@@ -1,0 +1,5 @@
+crewai
+crewai_tools
+pyyaml
+python-dotenv
+langchain_community

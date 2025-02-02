@@ -2,9 +2,20 @@ import yaml
 
 
 class ConfigProvider:
+    _instance = None
+
+    @classmethod
+    def get_instance(cls):
+        if cls._instance is None:
+            cls._instance = cls.__new__(cls)
+            cls._instance.__init__()
+        return cls._instance
+
     def __init__(self):
         self.agents_config = None
         self.tasks_config = None
+
+    def init(self):
         self.load_config()
 
     def load_config(self):
@@ -31,5 +42,6 @@ class ConfigProvider:
 
     def test(self):
         print("========= Testing ConfigProvider in config_provider.py file ")
+        self.init()
         self.dump()
         print("========= End Testing ============= ")

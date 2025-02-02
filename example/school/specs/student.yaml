@@ -9,4 +9,7 @@ properties :
   - name : class
     type : string
     reference : class
+  - name: section
+    type: string
+    reference: section
 

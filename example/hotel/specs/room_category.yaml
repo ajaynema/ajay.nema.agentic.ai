@@ -1,0 +1,7 @@
+name : room_category
+db_name : db_master
+properties :
+  - name : name
+    type : string
+    required : true
+

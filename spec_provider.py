@@ -1,10 +1,20 @@
 import os
 import yaml
+from application_provider import ApplicationProvider
 
 
-class SpecProvider():
-    def __init__(self, app_directory):
-        self.spec_directory = app_directory+"/specs/"
+class SpecProvider:
+    _instance = None
+
+    @classmethod
+    def get_instance(cls):
+        if cls._instance is None:
+            cls._instance = cls.__new__(cls)
+            cls._instance.__init__()
+        return cls._instance
+
+    def __init__(self):
+        self.spec_directory = ApplicationProvider.get_instance().get_path() + "/specs/"
         self.specs = dict()
         self.load_specs()
 
@@ -36,6 +46,3 @@ class SpecProvider():
         print("========= Testing SpecProvider in spec_provider.py file ")
         self.dump_all();
         print("========= End Testing ============= ")
-
-
-

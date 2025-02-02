@@ -2,16 +2,25 @@ import yaml
 
 
 class ApplicationProvider:
-    def __init__(self, path):
-        self.path = path
-        self.spec = None
-        self.init()
+    _instance = None
 
-    def init(self):
+    @classmethod
+    def get_instance(cls):
+        if cls._instance is None:
+            cls._instance = cls.__new__(cls)
+            cls._instance.__init__()
+        return cls._instance
+
+    def __init__(self):
+        self.path = None
+        self.spec = None
+
+    def init(self, path):
+        self.path = path
         with open(self.path + '/application.yaml', 'r') as f:
             self.spec = yaml.load(f, Loader=yaml.SafeLoader)
 
-    def getPath(self):
+    def get_path(self):
         return self.path
 
     def get_name(self):

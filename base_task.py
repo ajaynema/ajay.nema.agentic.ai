@@ -8,7 +8,7 @@ class BaseTask:
         self.name = name
         self.agent = agent
         self.task = None
-        self.config = ConfigProvider().get_task_config(name)
+        self.config = ConfigProvider.get_instance().get_task_config(name)
 
     def init(self):
         self.task = Task(

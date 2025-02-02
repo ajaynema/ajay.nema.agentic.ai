@@ -7,8 +7,8 @@ class BaseAgent:
     def __init__(self, name):
         self.name = name
         self.agent = None
-        self.config = ConfigProvider().get_agent_config(name)
-        self.llm = LLMProvider().get_default_llm()
+        self.config = ConfigProvider.get_instance().get_agent_config(name)
+        self.llm = LLMProvider.get_instance().get_default_llm()
 
     def init(self):
         self.agent = Agent(

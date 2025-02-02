@@ -1,0 +1,13 @@
+name : room
+db_name : db_master
+properties :
+  - name : name
+    type : string
+    required : true
+  - name: floor
+    type: int
+    required: true
+  - name: category
+    type: int
+    required: true
+    reference: room_category

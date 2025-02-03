@@ -1,4 +1,5 @@
-# Ajay.Nema.Agentic.AI - No code platform to build agentic business applications
+# Ajay.Nema.Agentic.AI 
+##No code platform to build agentic business applications
 Objective:
 Provide ajay.nema.ai with the application knowledge, and it will automatically generate a foundational agent-based application. Knowledge can be provided in various formats, such as YAML, JSON, or even natural language descriptions.
 ajay.nema.ai will be capable of scanning the current application database to construct a basic agentic AI-based application. This initial framework can be easily enhanced and expanded with more sophisticated business logic and rules based on application requirements. Additionally, ajay.nema.ai will enable building application-specific agents, allowing to expand and scale solution effortlessly—without any programming expertise.

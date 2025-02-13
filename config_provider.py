@@ -14,6 +14,7 @@ class ConfigProvider:
     def __init__(self):
         self.agents_config = None
         self.tasks_config = None
+        self.init()
 
     def init(self):
         self.load_config()

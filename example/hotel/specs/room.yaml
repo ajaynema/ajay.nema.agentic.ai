@@ -4,10 +4,11 @@ properties :
   - name : name
     type : string
     required : true
+    max_length : 10
   - name: floor
-    type: int
+    type: integer
     required: true
   - name: category
-    type: int
+    type: string
     required: true
     reference: room_category

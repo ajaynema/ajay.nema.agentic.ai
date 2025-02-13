@@ -1,23 +1,42 @@
 validate_spec_task:
   description: >
-    validate the specification based on the specfication rules 
+    validate the specification based on the specification rules 
     sample specification is 
-    name : student
+    name : student  #r
     db_name : db_master
     properties :
-      - name : name
+      - name : attr1
         type : string
         required : true
-      - name : dob
-        type : date
-      - name : class
-        type : string
         reference : class
+        max_length : 10
+      - name : attr2
+        type : string
+        required : true
+        reference : class
+        max_length : 10
+      ...
+    validation rules
+        1. check for invalid attribute , there can be be more entry in properties
+        2. atleast one value for properties
+        3. valid value for properties.type is string, integer, boolean, double, long. throw error if any other value
+        4. validate the properties attribute throw error if attribute not as sample
+        5. reference attribute is optional
+    
+
   expected_output: > 
-        return error if specification is has any error and possible corretion
+        return ok if no error. if error then provide summary of error with count
 
 get_spec_task:
    description: > 
-      return the requested specification
+      return the {specification} specification
    expected_output: >
-      return specification if doesn't exist return error
+      return {specification} specification if doesn't exist return error
+
+spec_manager_task:
+   description: > 
+      choose the right task based on {request}
+      1. validation the specification
+      2. get  specification
+   expected_output: >
+      perform the right task

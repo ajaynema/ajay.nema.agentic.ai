@@ -15,6 +15,7 @@ class ApplicationProvider:
         self.path = None
         self.spec = None
 
+
     def init(self, path):
         self.path = path
         with open(self.path + '/application.yaml', 'r') as f:
